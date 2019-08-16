@@ -9,7 +9,7 @@ export default class Steps extends Component {
     const authorized = await Fitness.requestPermissions();
     console.log(authorized)
     if (authorized) {
-      const res = Fitness.getSteps({
+      const res = await Fitness.getSteps({
         startDate: new Date("08/12/2019"),
         endDate: new Date("08/13/2019"),
       });
