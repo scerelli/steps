@@ -1,36 +1,27 @@
 import React, { Component } from 'react'
-import { Text, View, DeviceEventEmitter } from 'react-native'
+import { Text, SafeAreaView } from 'react-native'
 import Fitness from "@ovalmoney/react-native-fitness"
 
 
 
 export default class Steps extends Component {
-  componentDidMount() {
-    console.log(Fitness);
-    Fitness.requestPermissions()
-      .then((authorized) => {
-        debugger
-        Fitness.getSteps({
-          startDate: "08/12/2019",
-          endDate: "08/13/2019",
-        }).then(res => {
-          console.log(res);
-          debugger
-        }).catch(ex => {
-          debugger
-        })
-      })
-      .catch((error) => {
-        //Do something
+  async componentDidMount() {
+    const authorized = await Fitness.requestPermissions();
+    console.log(authorized)
+    if (authorized) {
+      const res = Fitness.getSteps({
+        startDate: new Date("08/12/2019"),
+        endDate: new Date("08/13/2019"),
       });
-
+      console.log(res);
+    }
   }
 
   render() {
     return (
-      <View>
+      <SafeAreaView>
         <Text style={{ color: "black" }}> textInComponent </Text>
-      </View>
+      </SafeAreaView>
     )
   }
 }

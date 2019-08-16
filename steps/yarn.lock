@@ -835,10 +835,9 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@ovalmoney/react-native-fitness@^0.2.0":
+"@ovalmoney/react-native-fitness@https://github.com/OvalMoney/react-native-fitness#0.2.2":
   version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@ovalmoney/react-native-fitness/-/react-native-fitness-0.2.0.tgz#f7c72086d1242445ad2eff6e47ca1876ae265e4f"
-  integrity sha512-WnXREPq8z+2m2mVZKNJMEIfJ0J6Jmynjw4cCO+M9vEABxlCuVZBKB4AwH4Jw8gkyRp5U4jW6xqpoif/yJQqMCQ==
+  resolved "https://github.com/OvalMoney/react-native-fitness#7129ccd1ed7c9eed25192fb88817cb0c98cea517"
 
 "@react-native-community/cli-platform-android@^2.6.0", "@react-native-community/cli-platform-android@^2.9.0":
   version "2.9.0"
